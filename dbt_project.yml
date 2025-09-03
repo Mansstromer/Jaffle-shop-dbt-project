@@ -1,0 +1,17 @@
+name: 'case_project'
+version: '1.0.0'
+config-version: 2
+
+profile: 'case_duckdb'
+
+seeds:
+  case_project:
+    +schema: raw
+
+models:
+  case_project:
+    +materialized: view
+    staging:
+      +schema: staging
+    marts:
+      +schema: marts
